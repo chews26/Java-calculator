@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("=====사칙연산 계산기=====");
+        System.out.println("==========사칙연산 계산기==========");
 
         System.out.print("원하는 조건문을 선택하세요(if, while) : ");
         String option = scanner.nextLine();
@@ -82,14 +82,13 @@ public class Main {
                             System.out.println("두번째 자리에 양의 정수를 입력하세요.");
                         }
                     }
-                    System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
+                    System.out.println("더 계산을 원하시면 아무키나 눌러주세요 (exit 입력 시 종료)");
                     String answer = scanner.nextLine();
-                    scanner.nextLine();
 
                     if (answer.equals("exit")) {
                         break;
                     } else {
-                        System.out.println("");
+                        System.out.println("=============================");
                     }
                 }
         }
