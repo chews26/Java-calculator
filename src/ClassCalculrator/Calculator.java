@@ -4,13 +4,14 @@ import java.util.ArrayList;
 
 public class Calculator {
 
-    // 필드 선언
+    // 필드 선언, private으로 클래스 내부에서만 읽을 수 있게
     ArrayList<Integer> resultlist = new ArrayList<>();
-    int result = 0;
-    // 오류 검증
+    int result = 0; // 결과값에 대한 기본값을 0으로 줌
+    // firstNum : input 첫번째 대입 숫자
+    // secondNum : input 두번째 대입 숫자
+    // operator : input 사칙연산 대입자
 
-
-    // 계산
+    // 계산 및 오류검증
     public int cal(int firstNum, int secondNum, char operator) {
         if (firstNum >= 0 && secondNum >= 0) {
             if (operator == '+') {
@@ -46,10 +47,22 @@ public class Calculator {
                 return 0;
             }
         }
-        // List에 저장
+
+        // 결과값인 result를 resultlist에 저장
         resultlist.add(result);
         return result;
 
-        // List 출력
-    }
-}
+//        // 결과 리스트 반환 (getter)
+//        public ArrayList<Integer> getResultList() {
+//            return new ArrayList<>(resultlist); // Returning a copy to prevent external modification
+//        }
+//
+//        // 결과 리스트에서 특정 인덱스 값 삭제 (setter)
+//        public void removeResult(int index) {
+//            if (index >= 0 && index < resultlist.size()) {
+//                resultlist.remove(index);
+//                System.out.println("결과가 성공적으로 삭제되었습니다.");
+//            } else {
+//                System.out.println("잘못된 인덱스입니다. 삭제할 수 없습니다.");
+            }
+        }
