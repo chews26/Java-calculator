@@ -2,13 +2,13 @@ package NoClassCalculrator;
 
 import java.util.Scanner;
 
-public class Main {
+public class App {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("==========사칙연산 계산기==========");
+        System.out.println("==========noClass 사칙연산 계산기==========");
 
-        System.out.print("원하는 조건문을 선택하세요(if, while) : ");
+        System.out.print("원하는 조건문을 선택하세요(if, while, case) : ");
         String option = scanner.nextLine();
 
         switch (option) {
@@ -32,7 +32,10 @@ public class Main {
                     } else if (operator0 == '*') {
                         System.out.println("결과 : " + (firstNum0 * secondNum0));
                     } else if (operator0 == '/') {
-                        System.out.println("결과 : " + (firstNum0 / secondNum0));
+                        if (secondNum0 == 0) {
+                            System.out.println("나눗셈 연산에서 분모(두번째 정수)에 0이 입력될 수 없습니다.");
+                        } else {
+                            System.out.println("결과 : " + (firstNum0 / secondNum0));}
                     } else {
                         System.out.println("사칙연산 값을 잘못 입력하셨습니다.");
                     }
@@ -45,6 +48,7 @@ public class Main {
                         System.out.println("두번째 자리에 양의 정수를 입력하세요.");
                     }
                 }
+                System.out.println("=========================================");
                 break;
 
 
@@ -69,7 +73,10 @@ public class Main {
                         } else if (operator1 == '*') {
                             System.out.println("결과 : " + (firstNum1 * secondNum1));
                         } else if (operator1 == '/') {
-                            System.out.println("결과 : " + (firstNum1 / secondNum1));
+                            if (secondNum1 == 0) {
+                                System.out.println("나눗셈 연산에서 분모(두번째 정수)에 0이 입력될 수 없습니다.");
+                            } else {
+                            System.out.println("결과 : " + (firstNum1 / secondNum1));}
                         } else {
                             System.out.println("사칙연산 값을 잘못 입력하셨습니다.");
                         }
@@ -88,9 +95,26 @@ public class Main {
                     if (answer.equals("exit")) {
                         break;
                     } else {
-                        System.out.println("=============================");
+                        System.out.println("=========================================");
                     }
+                }
+
+//            // 3. Case문으로 계산기 작성
+//            case "case":
+//                while (true) {
+//                    System.out.print("첫번째 숫자를 입력하세요 : ");
+//                    int firstNum2 = scanner.nextInt();
+//                    // 두번째 계산할 숫자 입력
+//                    System.out.print("두번째 숫자를 입력하세요 : ");
+//                    int secondNum2 = scanner.nextInt();
+//                    // 계산에 사용할 사칙연산 기호 입력
+//                    System.out.print("원하는 사칙연산 기호를 입력하세요(+, -, *, /) : ");
+//                    char operator2 = scanner.next().charAt(0);
+//                    scanner.nextLine();
+
+
+
                 }
         }
     }
-}
+
