@@ -27,7 +27,7 @@ public class App {
             System.out.println("");
 
             // resultlist에 저장된 값 출력
-            System.out.println("저장된 결과값 :" + calculator.resultlist);
+            System.out.println("저장된 결과값 :" + calculator.getResultlist());
             // resultlist에 저장된 결과값 삭제
             System.out.println("결과값을 삭제하고 싶으시면 y 아니면 n을 입력해주세요");
             String removeAnswer = scanner.nextLine();
@@ -37,14 +37,14 @@ public class App {
                 System.out.println("삭제하고 싶은 인덱스 번호를 입력하세요");
                 ;
                 int indexRemove = scanner.nextInt();
-                calculator.resultlist.remove(indexRemove);
-                System.out.println("수정 후 결과값 : " + calculator.resultlist);
+                calculator.removeResult(indexRemove);
+                System.out.println("수정 후 결과값 : " + calculator.getResultlist());
                 System.out.println("");
-
 
                 // 재 계산 여부 물어보기
                 System.out.println("더 계산을 원하시면 아무키나 눌러주세요 (exit 입력 시 종료)");
                 String answer = scanner.nextLine();
+                scanner.nextLine();
 
                 if (answer.equals("exit")) {
                     break;
