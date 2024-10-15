@@ -1,4 +1,4 @@
-package NoClassCalculrator;
+package Lv1Calculator;
 
 import java.util.Scanner;
 
@@ -6,7 +6,7 @@ public class App {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("==========noClass 사칙연산 계산기==========");
+        System.out.println("==========Lv1. 사칙연산 계산기==========");
 
         System.out.print("원하는 조건문을 선택하세요(if, while, case) : ");
         String option = scanner.nextLine();
@@ -35,7 +35,8 @@ public class App {
                         if (secondNum0 == 0) {
                             System.out.println("나눗셈 연산에서 분모(두번째 정수)에 0이 입력될 수 없습니다.");
                         } else {
-                            System.out.println("결과 : " + (firstNum0 / secondNum0));}
+                            System.out.println("결과 : " + (firstNum0 / secondNum0));
+                        }
                     } else {
                         System.out.println("사칙연산 값을 잘못 입력하셨습니다.");
                     }
@@ -76,7 +77,8 @@ public class App {
                             if (secondNum1 == 0) {
                                 System.out.println("나눗셈 연산에서 분모(두번째 정수)에 0이 입력될 수 없습니다.");
                             } else {
-                            System.out.println("결과 : " + (firstNum1 / secondNum1));}
+                                System.out.println("결과 : " + (firstNum1 / secondNum1));
+                            }
                         } else {
                             System.out.println("사칙연산 값을 잘못 입력하셨습니다.");
                         }
@@ -99,22 +101,54 @@ public class App {
                     }
                 }
 
-//            // 3. Case문으로 계산기 작성
-//            case "case":
-//                while (true) {
-//                    System.out.print("첫번째 숫자를 입력하세요 : ");
-//                    int firstNum2 = scanner.nextInt();
-//                    // 두번째 계산할 숫자 입력
-//                    System.out.print("두번째 숫자를 입력하세요 : ");
-//                    int secondNum2 = scanner.nextInt();
-//                    // 계산에 사용할 사칙연산 기호 입력
-//                    System.out.print("원하는 사칙연산 기호를 입력하세요(+, -, *, /) : ");
-//                    char operator2 = scanner.next().charAt(0);
-//                    scanner.nextLine();
+                // 3. Case문으로 계산기 작성
+            case "case":
+                while (true) {
+                    System.out.print("첫번째 숫자를 입력하세요 : ");
+                    int firstNum2 = scanner.nextInt();
+                    // 두번째 계산할 숫자 입력
+                    System.out.print("두번째 숫자를 입력하세요 : ");
+                    int secondNum2 = scanner.nextInt();
+                    // 계산에 사용할 사칙연산 기호 입력
+                    System.out.print("원하는 사칙연산 기호를 입력하세요(+, -, *, /) : ");
+                    char operator2 = scanner.next().charAt(0);
+                    scanner.nextLine();
 
+                    // 양의 정수를 입력하지 않을 경우 오류값 출력
+                    if (firstNum2 < 0 && secondNum2 < 0) {
+                        System.out.println("양의 정수를 입력하세요.");
+                    } else if (firstNum2 < 0) {
+                        System.out.println("첫번째 자리에 양의 정수를 입력하세요.");
+                    } else if (secondNum2 < 0) {
+                        System.out.println("두번째 자리에 양의 정수를 입력하세요.");
+                    } else {
 
+                        switch (operator2) {
+                            case '+':
+                                System.out.println("결과 : " + (firstNum2 + secondNum2));
+                                break;
+                            case '-':
+                                System.out.println("결과 : " + (firstNum2 - secondNum2));
+                                break;
+                            case '*':
+                                System.out.println("결과 : " + (firstNum2 * secondNum2));
+                                break;
+                            case '/':
+                                System.out.println("결과 : " + (firstNum2 / secondNum2));
+                            default:
+                                System.out.println("사칙연산 값을 잘못 입력하셨습니다."); // 사칙연산 값을 잘못 입력했을 경우 오류값 출력
+                        }
+                    }
+                    System.out.println("더 계산을 원하시면 아무키나 눌러주세요 (exit 입력 시 종료)");
+                    String answer = scanner.nextLine();
 
+                    if (answer.equals("exit")) {
+                        break;
+                    } else {
+                        System.out.println("=========================================");
+                    }
                 }
         }
     }
+}
 
