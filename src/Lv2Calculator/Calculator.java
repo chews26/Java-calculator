@@ -1,4 +1,4 @@
-package ClassCalculrator;
+package Lv2Calculator;
 
 import java.util.ArrayList;
 
@@ -58,14 +58,20 @@ public class Calculator {
         return resultlist;
     }
 
-    // 결과 리스트에서 특정 인덱스 값 삭제 (setter)
-    public void removeResult(int index) {
-        if (index < resultlist.size()) {
-            resultlist.remove(index);
-            System.out.println("결과가 성공적으로 삭제되었습니다.");
-        } else {
-            System.out.println("잘못된 인덱스입니다. 삭제할 수 없습니다.");
-        }
+    // 맨처음 저장된 결과 리스트 인덱스 값 삭제 (setter)
+    public void setRemoveResult() {
+        resultlist.remove(0);
     }
 }
+
+//   // 결과 리스트에서 특정 인덱스 값 삭제 (setter)
+//    public void setRemoveResult(int index) {
+//        if (index < resultlist.size()) { // index사이즈가 index사이즈보다 작으면 실행되도록
+//            resultlist.remove(0);
+//            System.out.println("결과가 성공적으로 삭제되었습니다.");
+//        } else {
+//            System.out.println("잘못된 인덱스입니다. 삭제할 수 없습니다.");
+//        }
+//    }
+
 
