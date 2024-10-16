@@ -65,8 +65,10 @@ public class Calculator {
                 } else {
                 System.out.println("결과 : " + (firstNum / secondNum));
                 result = firstNum / secondNum;}
+                break;
             default:
-                System.out.println("사칙연산 값을 잘못 입력하셨습니다."); // 사칙연산 값을 잘못 입력했을 경우 오류값 출력
+                System.out.println("사칙연산 값을 잘못 입력하셨습니다.");// 사칙연산 값을 잘못 입력했을 경우 오류값 출력
+                return -1;
         }
         // 결과값인 result를 resultlist에 저장
         resultlist.add(result);
