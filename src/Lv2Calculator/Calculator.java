@@ -54,7 +54,7 @@ public class Calculator {
     }
 
     // 결과 리스트 반환 (getter)
-    public ArrayList<Integer> getResultlist() {
+    public ArrayList<Integer> getResultList() {
         return resultlist;
     }
 
