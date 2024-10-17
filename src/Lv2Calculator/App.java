@@ -27,7 +27,7 @@ public class App {
             System.out.println("");
 
             // resultlist에 저장된 값 출력
-            System.out.println("저장된 결과값 :" + calculator.getResultlist());
+            System.out.println("저장된 결과값 :" + calculator.getResultList());
             // resultlist에 저장된 결과값 삭제
             System.out.println("가장 먼저 저장된 결과값을 삭제하고 싶으시면 y 아니면 아무키나 입력해주세요");
             String removeAnswer = scanner.nextLine();
@@ -39,7 +39,7 @@ public class App {
 
                 // 가장 먼저 저장된 결과값을 삭제하는 방법
                 calculator.setRemoveResult(); // set으로 입력된 인덱스 수정
-                System.out.println("삭제 후 결과값 : " + calculator.getResultlist());
+                System.out.println("삭제 후 결과값 : " + calculator.getResultList());
                 System.out.println("");
             } else {
             }
