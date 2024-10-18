@@ -1,5 +1,5 @@
 # JAVA 사칙연산 계산기
-- :house: [계산기 만들기 블로그 작성 내용 바로가기](https://shinelee26.tistory.com/tag/java%EB%A1%9C%20%EA%B3%84%EC%82%B0%EA%B8%B0%20%EB%A7%8C%EB%93%A4%EA%B8%B0)
+- :house: [계산기 만들기 블로그 작성 내용 바로가기](https://shinelee26.tistory.com/tag/java%20%EA%B3%84%EC%82%B0%EA%B8%B0)
 
 ### :one: Lv1. 클래스 없이 기본적인 연산을 수행할 수 있는 계산기 만들기 [>> 작성내용 바로가기](https://github.com/chews26/Java-calculator/blob/main/src/Lv1Calculator/App.java)
 - IF문을 활용한 계산기
